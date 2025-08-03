@@ -25,13 +25,14 @@ O fluxo de comunicação é o seguinte:
 
 ## 📂 Estrutura do Repositório
 
-/
-├── backend/         # Contém o Dockerfile e o código-fonte da aplicação PHP.
-├── database/        # Contém o Dockerfile e o script de inicialização do MySQL.
-├── deployment.yml   # Manifesto K8s para os Deployments do backend e database.
-├── service.yml      # Manifesto K8s para os Services (LoadBalancer e ClusterIP).
-├── script.sh        # Script de automação para Linux/macOS.
-└── script.bat       # Script de automação para Windows.
+```
+├── backend/         # Contém o Dockerfile e o código-fonte da aplicação PHP. 
+├── database/        # Contém o Dockerfile e o script de inicialização do MySQL. 
+├── deployment.yml   # Manifesto K8s para os Deployments do backend e database. 
+├── service.yml      # Manifesto K8s para os Services (LoadBalancer e ClusterIP). 
+├── script.sh        # Script de automação para Linux/macOS. 
+└── script.bat       # Script de automação para Windows. 
+```
 
 ## 🚀 Como Executar o Projeto
 
