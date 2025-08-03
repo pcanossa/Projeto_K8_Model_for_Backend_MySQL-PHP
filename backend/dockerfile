@@ -1,0 +1,16 @@
+FROM php:7.2-apache
+
+COPY index.php /var/www/html/
+COPY conexao.php /var/www/html/
+
+RUN apt-get update && install -y \
+    libzip-dev \
+    libpng-dev \
+    libjpeg62-dev \
+    libfreetype6-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install pdo_mysql \
+    && docker-php-ext-install mysqli \
+
+EXPOSE 80
